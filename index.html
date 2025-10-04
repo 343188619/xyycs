@@ -21,14 +21,14 @@
             --glass: rgba(255, 255, 255, 0.1);
             --transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
         }
-        
+        
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
         }
-        
+        
         body {
             background: linear-gradient(135deg, #0f0c29, #302b63, #24243e);
             color: var(--light);
@@ -36,7 +36,7 @@
             overflow-x: hidden;
             position: relative;
         }
-        
+        
         body::before {
             content: "";
             position: absolute;
@@ -44,18 +44,18 @@
             left: 0;
             width: 100%;
             height: 100%;
-            background: 
+            background: 
                 radial-gradient(circle at 10% 20%, rgba(106, 17, 203, 0.1) 0%, transparent 20%),
                 radial-gradient(circle at 90% 80%, rgba(37, 117, 252, 0.1) 0%, transparent 20%);
             z-index: -1;
         }
-        
+        
         .container {
             max-width: 1200px;
             margin: 0 auto;
             padding: 20px;
         }
-        
+        
         /* Logo and Header */
         .header {
             display: flex;
@@ -64,13 +64,13 @@
             padding: 20px 0;
             margin-bottom: 40px;
         }
-        
+        
         .logo {
             display: flex;
             align-items: center;
             gap: 15px;
         }
-        
+        
         .logo-icon {
             width: 50px;
             height: 50px;
@@ -82,7 +82,7 @@
             font-size: 24px;
             box-shadow: 0 8px 20px rgba(106, 17, 203, 0.3);
         }
-        
+        
         .logo-text {
             font-size: 28px;
             font-weight: 800;
@@ -91,7 +91,7 @@
             -webkit-text-fill-color: transparent;
             letter-spacing: -0.5px;
         }
-        
+        
         .auth-indicator {
             display: flex;
             align-items: center;
@@ -102,11 +102,11 @@
             backdrop-filter: blur(10px);
             border: 1px solid rgba(255, 255, 255, 0.1);
         }
-        
+        
         .auth-indicator i {
             color: var(--success);
         }
-        
+        
         /* Hero Section */
         .hero {
             text-align: center;
@@ -114,7 +114,7 @@
             padding: 40px 20px;
             position: relative;
         }
-        
+        
         .hero::after {
             content: "";
             position: absolute;
@@ -125,7 +125,7 @@
             height: 1px;
             background: linear-gradient(to right, transparent, var(--secondary), transparent);
         }
-        
+        
         .hero h1 {
             font-size: 3.5rem;
             margin-bottom: 20px;
@@ -134,7 +134,7 @@
             -webkit-text-fill-color: transparent;
             text-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
         }
-        
+        
         .hero p {
             font-size: 1.2rem;
             max-width: 700px;
@@ -142,7 +142,7 @@
             line-height: 1.7;
             color: #e0e0ff;
         }
-        
+        
         /* Test Selection */
         .test-selection {
             display: grid;
@@ -150,7 +150,7 @@
             gap: 30px;
             margin-bottom: 60px;
         }
-        
+        
         .test-card {
             background: var(--card-bg);
             border-radius: 20px;
@@ -163,13 +163,13 @@
             position: relative;
             overflow: hidden;
         }
-        
+        
         .test-card:hover {
             transform: translateY(-10px);
             box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
             border-color: rgba(106, 17, 203, 0.3);
         }
-        
+        
         .test-card::before {
             content: "";
             position: absolute;
@@ -179,19 +179,19 @@
             height: 5px;
             background: linear-gradient(to right, var(--primary), var(--secondary));
         }
-        
+        
         .test-card h3 {
             font-size: 1.8rem;
             margin-bottom: 15px;
             color: white;
         }
-        
+        
         .test-card p {
             margin-bottom: 20px;
             color: #b0b0d0;
             line-height: 1.6;
         }
-        
+        
         .question-count {
             display: inline-block;
             background: var(--glass);
@@ -200,7 +200,7 @@
             margin-top: 10px;
             font-weight: 600;
         }
-        
+        
         /* Test Container */
         .test-container {
             display: none;
@@ -211,7 +211,7 @@
             border: 1px solid rgba(255, 255, 255, 0.1);
             margin-bottom: 60px;
         }
-        
+        
         .progress-container {
             width: 100%;
             height: 8px;
@@ -220,39 +220,39 @@
             margin: 20px 0 30px;
             overflow: hidden;
         }
-        
+        
         .progress-bar {
             height: 100%;
             background: linear-gradient(to right, var(--primary), var(--secondary));
             width: 0%;
             transition: width 0.5s ease;
         }
-        
+        
         .question {
             margin-bottom: 30px;
             padding-bottom: 30px;
             border-bottom: 1px solid rgba(255, 255, 255, 0.1);
         }
-        
+        
         .question-number {
             font-size: 1.1rem;
             color: var(--secondary);
             margin-bottom: 10px;
             font-weight: 600;
         }
-        
+        
         .question-text {
             font-size: 1.3rem;
             margin-bottom: 20px;
             line-height: 1.6;
         }
-        
+        
         .options {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
             gap: 15px;
         }
-        
+        
         .option {
             background: rgba(255, 255, 255, 0.05);
             padding: 15px;
@@ -263,27 +263,27 @@
             align-items: center;
             gap: 12px;
         }
-        
+        
         .option:hover {
             background: rgba(255, 255, 255, 0.1);
             transform: translateX(5px);
         }
-        
+        
         .option.selected {
             background: linear-gradient(135deg, rgba(106, 17, 203, 0.2), rgba(37, 117, 252, 0.2));
             border: 1px solid var(--secondary);
         }
-        
+        
         .option input {
             display: none;
         }
-        
+        
         .navigation {
             display: flex;
             justify-content: space-between;
             margin-top: 30px;
         }
-        
+        
         .btn {
             padding: 12px 30px;
             border-radius: 50px;
@@ -296,26 +296,26 @@
             align-items: center;
             gap: 8px;
         }
-        
+        
         .btn-prev {
             background: rgba(255, 255, 255, 0.1);
             color: white;
         }
-        
+        
         .btn-prev:hover {
             background: rgba(255, 255, 255, 0.2);
         }
-        
+        
         .btn-next, .btn-submit {
             background: linear-gradient(135deg, var(--primary), var(--secondary));
             color: white;
         }
-        
+        
         .btn-next:hover, .btn-submit:hover {
             transform: translateY(-3px);
             box-shadow: 0 10px 20px rgba(106, 17, 203, 0.4);
         }
-        
+        
         /* Results Section */
         .results-container {
             display: none;
@@ -326,12 +326,12 @@
             border: 1px solid rgba(255, 255, 255, 0.1);
             margin-bottom: 60px;
         }
-        
+        
         .result-header {
             text-align: center;
             margin-bottom: 40px;
         }
-        
+        
         .result-header h2 {
             font-size: 2.5rem;
             margin-bottom: 15px;
@@ -339,13 +339,13 @@
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
         }
-        
+        
         .result-summary {
             display: flex;
             justify-content: center;
             margin-bottom: 40px;
         }
-        
+        
         .score-card {
             background: linear-gradient(135deg, rgba(106, 17, 203, 0.2), rgba(37, 117, 252, 0.2));
             padding: 25px;
@@ -353,7 +353,7 @@
             text-align: center;
             min-width: 250px;
         }
-        
+        
         .score-value {
             font-size: 3.5rem;
             font-weight: 800;
@@ -362,54 +362,54 @@
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
         }
-        
+        
         .score-label {
             font-size: 1.2rem;
             color: #b0b0d0;
         }
-        
+        
         .charts-container {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
             gap: 30px;
             margin-bottom: 40px;
         }
-        
+        
         .chart-card {
             background: rgba(255, 255, 255, 0.05);
             padding: 25px;
             border-radius: 20px;
             text-align: center;
         }
-        
+        
         .chart-title {
             margin-bottom: 20px;
             font-size: 1.3rem;
             color: #e0e0ff;
         }
-        
+        
         .chart-container {
             height: 250px;
             position: relative;
         }
-        
+        
         .interpretation {
             background: rgba(255, 255, 255, 0.05);
             padding: 25px;
             border-radius: 20px;
             margin-top: 20px;
         }
-        
+        
         .interpretation h3 {
             margin-bottom: 15px;
             color: var(--secondary);
         }
-        
+        
         .interpretation p {
             line-height: 1.7;
             color: #d0d0e0;
         }
-        
+        
         /* Legal Section */
         .legal {
             background: rgba(0, 0, 0, 0.2);
@@ -417,25 +417,25 @@
             border-radius: 20px;
             margin-top: 40px;
         }
-        
+        
         .legal h3 {
             margin-bottom: 15px;
             color: var(--secondary);
         }
-        
+        
         .legal p {
             margin-bottom: 15px;
             line-height: 1.7;
             color: #b0b0d0;
         }
-        
+        
         .legal-links {
             display: flex;
             gap: 20px;
             margin-top: 15px;
             flex-wrap: wrap;
         }
-        
+        
         .legal-link {
             color: var(--secondary);
             text-decoration: none;
@@ -443,66 +443,66 @@
             align-items: center;
             gap: 8px;
         }
-        
+        
         .legal-link:hover {
             text-decoration: underline;
         }
-        
+        
         /* Responsive Design */
         @media (max-width: 768px) {
             .hero h1 {
                 font-size: 2.5rem;
             }
-            
+            
             .test-container, .results-container {
                 padding: 25px;
             }
-            
+            
             .options {
                 grid-template-columns: 1fr;
             }
-            
+            
             .result-summary {
                 flex-direction: column;
                 gap: 20px;
             }
         }
-        
+        
         @media (max-width: 480px) {
             .header {
                 flex-direction: column;
                 gap: 20px;
             }
-            
+            
             .hero h1 {
                 font-size: 2rem;
             }
-            
+            
             .btn {
                 width: 100%;
                 justify-content: center;
             }
-            
+            
             .navigation {
                 flex-direction: column;
                 gap: 15px;
             }
         }
-        
+        
         /* Animations */
         @keyframes fadeIn {
             from { opacity: 0; transform: translateY(20px); }
             to { opacity: 1; transform: translateY(0); }
         }
-        
+        
         .fade-in {
             animation: fadeIn 0.8s ease forwards;
         }
-        
+        
         .stagger-item {
             opacity: 0;
         }
-        
+        
         .stagger-item.visible {
             animation: fadeIn 0.6s ease forwards;
         }
@@ -523,13 +523,13 @@
                 <span>国际权威认证</span>
             </div>
         </header>
-        
+        
         <!-- Hero Section -->
         <section class="hero">
             <h1>性压抑专业评估系统</h1>
             <p>基于国际标准量表（SESAMO-W&S）的专业评估工具，通过科学严谨的测试帮助您了解自身性心理状态。本测试严格遵循医学伦理，所有数据加密处理，结果仅用于自我认知参考。</p>
         </section>
-        
+        
         <!-- Test Selection -->
         <section class="test-selection">
             <div class="test-card" id="quick-test">
@@ -543,7 +543,7 @@
                 <div class="question-count">40 个问题</div>
             </div>
         </section>
-        
+        
         <!-- Test Container -->
         <div class="test-container" id="test-container">
             <div class="progress-container">
@@ -564,14 +564,14 @@
                 </button>
             </div>
         </div>
-        
+        
         <!-- Results Section -->
         <div class="results-container" id="results-container">
             <div class="result-header">
                 <h2>评估结果分析</h2>
                 <p>基于您的回答，系统生成了以下专业分析报告</p>
             </div>
-            
+            
             <div class="result-summary">
                 <div class="score-card">
                     <div class="score-label">性压抑指数</div>
@@ -579,7 +579,7 @@
                     <div class="score-label" id="score-level">待评估</div>
                 </div>
             </div>
-            
+            
             <div class="charts-container">
                 <div class="chart-card">
                     <div class="chart-title">压抑维度分布</div>
@@ -594,7 +594,7 @@
                     </div>
                 </div>
             </div>
-            
+            
             <div class="interpretation">
                 <h3>专业解读</h3>
                 <p id="interpretation-text">
@@ -602,7 +602,7 @@
                 </p>
             </div>
         </div>
-        
+        
         <!-- Legal Section -->
         <div class="legal">
             <h3>隐私与使用协议</h3>
@@ -825,18 +825,18 @@
                 <div class="question-number">问题 ${currentQuestionIndex + 1} / ${currentTest.length}</div>
                 <div class="question-text">${question.text}</div>
                 <div class="options">
-                    ${question.options.map((option, index) => 
+                    ${question.options.map((option, index) => 
                         `<div class="option" data-value="${index}">
                             <span>${option}</span>
                         </div>`
                     ).join('')}
                 </div>
             `;
-            
+            
             // Set progress
             const progress = ((currentQuestionIndex) / currentTest.length) * 100;
             progressBar.style.width = `${progress}%`;
-            
+            
             // Update button visibility
             prevBtn.style.display = currentQuestionIndex === 0 ? 'none' : 'inline-flex';
             if (currentQuestionIndex === currentTest.length - 1) {
@@ -846,7 +846,7 @@
                 nextBtn.style.display = 'inline-flex';
                 submitBtn.style.display = 'none';
             }
-            
+            
             // Add event listeners to options
             document.querySelectorAll('.option').forEach(option => {
                 option.addEventListener('click', () => {
@@ -854,15 +854,15 @@
                     document.querySelectorAll('.option').forEach(opt => {
                         opt.classList.remove('selected');
                     });
-                    
+                    
                     // Add selected class to clicked option
                     option.classList.add('selected');
-                    
+                    
                     // Save answer
                     const value = parseInt(option.getAttribute('data-value'));
                     answers[currentQuestionIndex] = value;
                 });
-                
+                
                 // Restore previous selection if exists
                 if (answers[currentQuestionIndex] !== null) {
                     const value = answers[currentQuestionIndex];
@@ -897,7 +897,7 @@
                 alert('请先选择一个答案');
                 return;
             }
-            
+            
             calculateResults();
             showResults();
         });
@@ -910,11 +910,11 @@
                     totalScore += answer;
                 }
             });
-            
+            
             // Normalize score to 0-100 scale
             const maxPossible = currentTest.length * 4; // Assuming 5 options (0-4)
             const normalizedScore = Math.round((totalScore / maxPossible) * 100);
-            
+            
             // Determine level
             let level;
             if (normalizedScore < 20) level = "极低压抑";
@@ -922,17 +922,17 @@
             else if (normalizedScore < 60) level = "中度压抑";
             else if (normalizedScore < 80) level = "高度压抑";
             else level = "极度压抑";
-            
+            
             // Calculate dimension scores (simplified for demo)
             dimensionScores.biological = Math.min(100, normalizedScore * 0.8 + Math.random() * 20);
             dimensionScores.psychological = Math.min(100, normalizedScore * 0.9 + Math.random() * 15);
             dimensionScores.relational = Math.min(100, normalizedScore * 0.7 + Math.random() * 25);
             dimensionScores.sociocultural = Math.min(100, normalizedScore * 0.85 + Math.random() * 20);
-            
+            
             // Set global results
             scoreValue.textContent = normalizedScore;
             scoreLevel.textContent = level;
-            
+            
             // Generate interpretation
             let interpretation = "";
             if (normalizedScore < 30) {
@@ -948,7 +948,7 @@
         function showResults() {
             testContainer.style.display = 'none';
             resultsContainer.style.display = 'block';
-            
+            
             // Create charts after a short delay to ensure container is visible
             setTimeout(() => {
                 createDimensionChart();
@@ -1017,17 +1017,17 @@
             const ctx = document.getElementById('risk-chart').getContext('2d');
             const score = parseInt(scoreValue.textContent);
             let riskLevel;
-            
+            
             if (score < 30) riskLevel = "低风险";
             else if (score < 60) riskLevel = "中风险";
             else riskLevel = "高风险";
-            
+            
             new Chart(ctx, {
                 type: 'doughnut',
                 data: {
                     labels: ['低风险', '中风险', '高风险'],
                     datasets: [{
-                        data: riskLevel === "低风险" ? [100, 0, 0] : 
+                        data: riskLevel === "低风险" ? [100, 0, 0] : 
                                riskLevel === "中风险" ? [0, 100, 0] : [0, 0, 100],
                         backgroundColor: [
                             'rgba(0, 201, 167, 0.7)',
